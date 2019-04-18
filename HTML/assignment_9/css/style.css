@@ -1008,6 +1008,10 @@ margin-left: 0px;
     position: relative;
 }
 
+#contact .sec3{
+    padding: 0px;
+}
+
 #contact .bg_grey2{
     background: #e5e3df;
     height: 500px;
