@@ -1,0 +1,115 @@
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="home active"><a href="index.html?page=home">Home</a></li>
+        <li class="dropdown page">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pages<span class="caret"></span></a>
+          <ul class="dropdown-menu sub_menu1">
+            <li class="gal"><a href="gallery.html?page=gal">Gallery</a></li>
+            <li class="full"><a href="full.html?page=full">Full Width</a></li>
+            <li class="sdl"><a href="sidebarleft.html?page=sdl">Sidebar Left</a></li>
+            <li class="sdr"><a href="sidebarright.html?page=sdr">Sidebar Right</a></li>
+            <li class="grid"><a href="grid.html?page=grid">Basic Grid</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown<span class="caret"></span></a>
+          <ul class="dropdown-menu sub_menu1">
+            <li><a tabindex="-1" href="#">Level 2</a></li>
+            <li class="dropdown-submenu">
+              <a class="test" href="#">Level 2 + Drop<span class="caret"></span></a>
+              <ul class="dropdown-menu sub_menu2">
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+                <li><a href="#">Level 3</a></li>
+              </ul>
+            </li>
+            <li><a tabindex="-1" href="#">Level 2</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Link Text</a></li>
+        <li><a href="#">Link text</a></li>
+      </ul>
+      <ul class="nav navbar-nav social navbar-right">
+        <li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a class="dribble" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+        <li><a class="twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a class="google-plus" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+        <li><a class="linkedin" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="top_header">
+  <div class="custom_container">
+    <div class="custom_row">
+      <div class="logo">
+        <a href="index.html">
+          <h1>Devenna</h1>
+        </a>
+      </div>
+      <div class="header_contact">
+        <ul class="head_cont">
+          <li>
+            <p>SUSPENDISSE:</p>+ 1234567890
+          </li>
+          <li>
+            <p>LOBORTIS:</p>+ 1234567890
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  $(document).ready(function(){
+    var url_string = window.location.href; //window.location.href
+    var url = new URL(url_string);
+    var page = url.searchParams.get("page");
+    console.log(page);
+
+
+    if (page == "home") {
+      $('.navbar-nav li.active').removeClass("active");
+      $('.navbar-nav li.home').addClass("active");
+    }
+    else if (page == "gal") {
+      $('.navbar-nav li.active').removeClass("active");
+      $('.navbar-nav li.gal').addClass("active");
+      $('.navbar-nav li.page').addClass("active");
+    }
+    else if (page == "full") {
+      $('.navbar-nav li.active').removeClass("active");
+      $('.navbar-nav li.full').addClass("active");
+      $('.navbar-nav li.page').addClass("active");
+    }
+    else if (page == "sdl") {
+      $('.navbar-nav li.active').removeClass("active");
+      $('.navbar-nav li.sdl').addClass("active");
+      $('.navbar-nav li.page').addClass("active");
+    }
+    else if (page == "sdr") {
+      $('.navbar-nav li.active').removeClass("active");
+      $('.navbar-nav li.sdr').addClass("active");
+      $('.navbar-nav li.page').addClass("active");
+    }
+    else if (page == "grid") {
+      $('.navbar-nav li.active').removeClass("active");
+      $('.navbar-nav li.grid').addClass("active");
+      $('.navbar-nav li.page').addClass("active");
+    }
+  });
+</script>

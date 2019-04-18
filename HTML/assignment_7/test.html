@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+<style>
+
+.sec4{
+	padding: 100px 0px;
+}
+
+.sec4 .pricing_div{
+    border-radius: 4px 4px 6px 6px;
+}
+
+.sec4 .price_header{
+    height: auto;
+    padding: 20px 10px 15px 20px;
+    pointer-events: auto;
+    text-align: center;
+    color: #000;
+    font-size: 14px; 
+    position: relative;
+    z-index: 1;
+    border:1px #82ca9c solid;
+}
+
+.sec4 .col-md-4.active .price_header{
+    background: #82ca9c;
+    color: #fff;
+}
+
+.sec4 .price_header h2{
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sec4 .price_header .symbol{
+    display: inline-block;
+    margin-top: 0px;
+    vertical-align: top;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+
+.sec4 .price_header .value{
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.sec4 .price_header .duration{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sec4 .price_body{
+    overflow-x: visible; 
+}
+
+.sec4 .pricing{
+    width: auto;
+    padding: 0px;
+}
+
+.sec4 .pricing li{
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 15px;
+}
+
+.sec4 .pricing_div footer{
+    position: relative;
+    height: auto;
+    text-align: center;
+    width: 100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+
+.sec4 .pricing_div footer a{
+    display: block;
+    border-radius: 0 0 4px 4px;
+    background: #82ca9c;
+    color: #fff;
+    padding: 25px;
+}
+
+
+.container {
+    /*position: relative;*/
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+.card {
+    /*position: absolute;*/
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.card .pricing_div{
+	width: 100%;
+	padding: 15px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card .back {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.card.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+.go_back{
+	z-index: 2
+}
+
+</style>
+<body>
+	<section class="sec4">
+		<div class="container">
+			<div class="row">
+				  <div class="col-md-12 col-sm-12">
+                	<div class="col-md-4 col-sm-4 card">
+                		<div class="pricing_div hide_it">
+	                		<header class="price_header">
+	                			<h2>Basic</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">30</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+	                	</div>
+	                	<div class="pricing_div back">
+	                		<header class="price_header">
+	                			<h2>Basic</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">320</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+	                	</div>
+            	    </div>
+            		<div class="col-md-4 col-sm-4 active card">
+            			<div class="pricing_div hide_it">
+	                		<header class="price_header">
+	                			<h2>Popular</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">60</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+            	        </div>
+            	        <div class="pricing_div back">
+	                		<header class="price_header">
+	                			<h2>Popular</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">630</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+            	        </div>
+            	    </div>
+            		<div class="col-md-4 col-sm-4 card">
+            			<div class="pricing_div hide_it">
+	                		<header class="price_header">
+	                			<h2>Premier</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">90</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+            	        </div>
+            	        <div class="pricing_div back">
+	                		<header class="price_header">
+	                			<h2>Premier</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">950</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+            	        </div>
+                	</div>
+                </div>
+                <button onclick="flip()" style="position: relative;">flip the card1</button>
+                <button onclick="flip()" style="position: relative;">flip the card2</button>
+			</div>
+		</div>
+	</section>
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  	function flip() {
+    $('.card').toggleClass('flipped');
+    $('.hide_it').toggleClass('go_back');
+   }
+  </script>
+</body>
+</html>

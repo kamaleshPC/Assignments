@@ -1,0 +1,49 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <div class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar strip1"></span>
+                <span class="icon-bar strip2"></span>
+                <span class="icon-bar strip3"></span>
+            </div>
+            <a class="navbar-brand" href="#">Clean</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="home active"><a href="index.html?page=home">Home</a></li>
+                <li class="sdr"><a href="rightsidebar.html?page=sdr">Right sidebar</a></li>
+                <li class="sdl"><a href="leftsidebar.html?page=sdl">Left Sidebar</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <script>
+        $(document).ready(function () {
+            $(".navbar-toggle").click(function () {
+                $('.navbar-toggle').toggleClass("animate_btn");
+            });
+
+
+            var url_string = window.location.href; //window.location.href
+            var url = new URL(url_string);
+            var page = url.searchParams.get("page");
+            console.log(page);
+
+
+            if (page == "home") {
+                $('.navbar-nav li.active').removeClass("active");
+                $('.navbar-nav li.home').addClass("active");
+            }
+            else if (page == "sdl") {
+                $('.navbar-nav li.active').removeClass("active");
+                $('.navbar-nav li.sdl').addClass("active");
+                $('.navbar-nav li.page').addClass("active");
+            }
+            else if (page == "sdr") {
+                $('.navbar-nav li.active').removeClass("active");
+                $('.navbar-nav li.sdr').addClass("active");
+                $('.navbar-nav li.page').addClass("active");
+            }
+        });
+    </script>

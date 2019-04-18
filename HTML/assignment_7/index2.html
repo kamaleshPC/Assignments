@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Soft-Tech</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<!-- <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<style type="text/css">
+	.sec4{
+    padding: 100px 0px;
+}
+
+
+/*.sec4 .toggle_switch{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.sec4 .switch{
+    position: relative;
+    display: inline-block;
+    background: #82ca9c;
+    padding: 12px 2px;
+    border-radius: 20px;
+}
+
+.sec4 .switch span{
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+
+
+.sec4 .switch span.active{
+    background: #0c1f28;
+    border-radius: 20px;
+}*/
+
+
+.sec4 .pricing_div{
+    border-radius: 4px 4px 6px 6px;
+}
+
+.sec4 .price_header{
+    height: auto;
+    padding: 20px 10px 15px 20px;
+    pointer-events: auto;
+    text-align: center;
+    color: #000;
+    font-size: 14px; 
+    position: relative;
+    z-index: 1;
+    border:1px #82ca9c solid;
+}
+
+.sec4 .col-md-4.active .price_header{
+    background: #82ca9c;
+    color: #fff;
+}
+
+.sec4 .price_header h2{
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sec4 .price_header .symbol{
+    display: inline-block;
+    margin-top: 0px;
+    vertical-align: top;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+
+.sec4 .price_header .value{
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.sec4 .price_header .duration{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sec4 .price_body{
+    overflow-x: visible; 
+}
+
+.sec4 .pricing{
+    width: auto;
+    padding: 0px;
+}
+
+.sec4 .pricing li{
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 15px;
+}
+
+.sec4 .pricing_div footer{
+    position: relative;
+    height: auto;
+    text-align: center;
+    width: 100%;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+
+.sec4 .pricing_div footer a{
+    display: block;
+    border-radius: 0 0 4px 4px;
+    background: #82ca9c;
+    color: #fff;
+    padding: 25px;
+}
+
+.sec4 .fa-check-circle{
+    color: #82ca9c;
+    margin-right: 5px;
+}
+
+.sec4 .fa-times{
+    color: red;
+    margin-right: 5px;
+}
+
+
+.sec4 .col-md-4 , .sec4 .col-sm-4{
+    margin-bottom: 20px;
+}
+
+.sec4 .container {
+    /*position: relative;*/
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+.sec4 .card {
+    /*position: absolute;*/
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.sec4 .card .pricing_div{
+    width: 100%;
+    padding: 15px;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.sec .card .back {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+.sec4 .card.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+.sec4 .go_back{
+    z-index: 2
+}
+</style>
+<body id="page_top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+	<div class="loader"></div>
+    <div class="social_div">
+    	<div class="container">
+    		<div class="row">
+    			<ul class="social_icon">
+    				<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+    				<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    				<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+    				<li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+    			</ul>
+    			<ul class="contact_icon">
+    				<li><a href=""><i class="fa fa-phone" aria-hidden="true"></i></a><span> +1234567890</span></li>
+    				<li><a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a><span> contact@softech.com</span></li>
+    		</div>
+    	</div>
+    </div>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="home">Home</a></li>
+        <li><a href="product">Product</a></li>
+        <li><a href="services">Service</a></li> 
+        <li><a href="price">Price</a></li>
+        <li><a href="business">Business</a></li> 
+        <li><a href="contact">contact</a></li> 
+        <li><a href="#" class="nav_btn btn">Sign in</a></li>  
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- home -->
+
+<header id="home" class="sec1">
+	<div class="overlay"></div>
+	<div class="container text-center">
+		<div class="row">
+			<div class="home_div">
+				<div class="col-md-12 col-sm-12 ">
+					<h1>Bring your Big Data to Life With Soft-Tech</h1>
+					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					<div class="row">
+						<div class="col-md-5 col-sm-5">
+							<div class="input-group">
+								<input type="text" name="email" placeholder="Enter your email address" class="form-control" required>
+								<input type="submit" name="use it free" value="Use It Free" class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+		    </div>
+		</div>
+	</div>
+</header>
+
+
+<!-- product -->
+
+<section id="product" class="sec2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<img src="images/feature-2.jpg" class="img-responsive" alt="">
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="prod_content">
+					<h1>OUR PRODUCT</h1>
+					<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+					<ul>
+						<li>Powerful Processor</li>
+						<li>1 TB of Strorage</li>
+						<li>Powerful GPU</li>
+					</ul>
+					<div class="fet_btn">
+						<a href="" class="btn sec_btn">Read More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="product" class="sec2">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="prod_content">
+					<h1>OUR PRODUCT</h1>
+					<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+					<ul>
+						<li>Powerful Processor</li>
+						<li>1 TB of Strorage</li>
+						<li>Powerful GPU</li>
+					</ul>
+					<div class="fet_btn">
+						<a href="" class="btn sec_btn">Read More</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<img src="images/feature-1.jpg" class="img-responsive" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- services -->
+
+<section id="services" class="sec3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 text-center">
+				<h1>SERVICES WE PROVIDE</h1>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			</div>
+			<div class="col-md-6 col-sm-6 mrg_btm">
+				<div class="img_div">
+					<img src="images/flaticon1.png" class="img-responsive" alt="">
+				</div>
+				<div class="serv_cont">
+					<h1>BRANDING</h1>
+					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 mrg_btm">
+				<div class="img_div">
+					<img src="images/flaticon2.png" class="img-responsive" alt="">
+				</div>
+				<div class="serv_cont">
+					<h1>BRANDING</h1>
+					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 mrg_btm">
+				<div class="img_div">
+					<img src="images/flaticon3.png" class="img-responsive" alt="">
+				</div>
+				<div class="serv_cont">
+					<h1>BRANDING</h1>
+					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 mrg_btm">
+				<div class="img_div">
+					<img src="images/flaticon4.png" class="img-responsive" alt="">
+				</div>
+				<div class="serv_cont">
+					<h1>BRANDING</h1>
+					<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- price -->
+
+<section id="price" class="sec4">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 text-center">
+				<h1>Affordable Services Package</h1>
+				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                <div class="toggle_switch"><p class="switch"><span class="active" id="business">Business</span><span id="community">Community</span></p></div>
+                <div class="col-md-12 col-sm-12">
+                	<div class="col-md-4 col-sm-4 ">
+                		<div class="pricing_div plan1 vissible">
+	                		<header class="price_header">
+	                			<h2>Basic</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">30</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+	                	</div>
+	                	<div class="pricing_div plan2 hidden">
+	                		<header class="price_header">
+	                			<h2>Basic</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">320</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+	                	</div>
+            	    </div>
+            		<div class="col-md-4 col-sm-4 active">
+            			<div class="pricing_div plan1 vissible">
+	                		<header class="price_header">
+	                			<h2>Popular</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">60</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+            	        </div>
+            	        <div class="pricing_div plan2 hidden">
+	                		<header class="price_header">
+	                			<h2>Popular</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">630</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+            	        </div>
+            	    </div>
+            		<div class="col-md-4 col-sm-4">
+            			<div class="pricing_div plan1 vissible">
+	                		<header class="price_header">
+	                			<h2>Premier</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">90</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+            	        </div>
+            	        <div class="pricing_div plan2 hidden">
+	                		<header class="price_header">
+	                			<h2>Premier</h2>
+	                			<div class="price_div">
+	                				<span class="symbol">$</span>
+	                				<span class="value">950</span>
+	                				<span class="duration">/MO</span>
+	                			</div>
+	                		</header>
+	                		<div class="price_body">
+	                			<ul class="pricing">
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>20 Keyword</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>No Time Tracking</span></li>
+	                				<li><i class="fa fa-times" aria-hidden="true"></i><span>230 - Man Hour</span></li>
+	                				<li><i class="fa fa-check-circle" aria-hidden="true"></i><span>News Letter Available</span></li>
+	                			</ul>
+	                		</div>
+	                		<footer class="price_footer">
+	                			<a class="price_btn" href="#">Purchase</a>
+	                		</footer>
+            	        </div>
+                	</div>
+                </div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- business -->
+
+<section id="business" class="sec5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 text-center mrg_btm">
+				<h1>Our Business Analytics Platform</h1>
+				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+			</div>
+			<div class="sec5_div text-center">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="sec5_subdiv">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        <div class="divider"></div>
+                        <h4>Community Edition</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="sec5_subdiv">
+                        <i class="fa fa-bug" aria-hidden="true"></i>
+                        <div class="divider"></div>
+                        <h4>Community Edition</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="sec5_subdiv">
+                        <i class="fa fa-cogs" aria-hidden="true"></i>
+                        <div class="divider"></div>
+                        <h4>Community Edition</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="sec5_subdiv">
+                        <i class="fa fa-external-link" aria-hidden="true"></i>
+                        <div class="divider"></div>
+                        <h4>Community Edition</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					</div>
+				</div>
+			</div>
+			<div class="sec5_div text-center">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="sec5_subdiv">
+                        <i class="fa fa-coffee" aria-hidden="true"></i>
+                        <div class="divider"></div>
+                        <h4>Community Edition</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="sec5_subdiv">
+                        <i class="fa fa-tree" aria-hidden="true"></i>
+                        <div class="divider"></div>
+                        <h4>Community Edition</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="sec5_subdiv">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                        <div class="divider"></div>
+                        <h4>Community Edition</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="sec5_subdiv">
+                        <i class="fa fa-folder-open" aria-hidden="true"></i>
+                        <div class="divider"></div>
+                        <h4>Community Edition</h4>
+                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- contact -->
+
+<section id="contact" class="sec6">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 text-center mrg_btm">
+				<h1>GET IN TOUCH</h1>
+				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+			</div>
+			<div class="contact_div">
+				<div class="col-md-6">
+					<form>
+						<input type="text" name="Name" placeholder="Name" class="form-control fields" required>
+						<input type="Email" name="Email" placeholder="Email" class="form-control fields" required>
+						<textarea rows="8" class="form-control" placeholder="Message"></textarea>
+						<br>
+						<input type="submit" class="form-control btn sec_btn" name="Submit" value="Submit">
+					</form>
+				</div>
+				<div class="col-md-6">
+					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+					<div class="address">
+						<p>1600 Pennsylvania Ave NW, Washington,</p>
+						<p>DC 20500, United States of America.</p>
+						<p>T:(202) 456-1111</p>
+						<p>M:(202) 456-1212</p>
+					</div>
+					<ul class="social_icon">
+						<li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- footer menu -->
+
+<section id="footer_menu" class="sec7">
+	<div class="container">
+		<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="foot_menu">
+						<h5>Quick Links</h5>
+						<ul>
+							<li>power bi desktop</li>
+							<li>mobile</li>
+							<li>see all downloads</li>
+							<li>power bi desktop</li>
+							<li>mobile</li>
+							<li>see all downloads</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="foot_menu">
+						<h5>Legal</h5>
+						<ul>
+							<li>privacy & cookies</li>
+							<li>terms of use</li>
+							<li>trademarks</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="foot_menu">
+						<h5>Information</h5>
+						<ul>
+							<li>support</li>
+							<li>developers</li>
+							<li>blog</li>
+							<li>newsletter</li>
+							<li>pyramid analytics</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="foot_menu">
+						<h5>Information</h5>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+						<div class="input-group">
+								<input type="text" name="email" placeholder="Enter your email address" class="form-control" required>
+								<input type="submit" name="use it free" value="Use It Free" class="form-control">
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+</section>
+
+<!-- footer -->
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12">
+				<div class="footer_logo">
+					<img src="images/logo.png" alt="">
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12 text-right">
+				<div class="copyright">
+					<p>Made with <i class="fa fa-heart"></i> by <a href="">Bootstrap Themes</a> 2016. All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="pagetop">
+	<a href="#page_top">
+		<i class="fa fa-chevron-up" aria-hidden="true"></i>
+	</a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+		$(document).ready(function() {
+		    $('.loader').fadeOut(1000);  /*FadeOut after page loaded*/
+		    console.log("document loaded!");
+
+		    $(function(){
+			    $('.switch span').click(function(){
+			        $('.switch span.active').removeClass('active');
+			        $(this).addClass('active');
+			    });
+			});
+
+			 $(function(){
+			    $('#business').click(function(){
+			        $('.plan1').toggleClass('vissible hidden');
+			        $('.plan2').toggleClass('hidden vissible');
+			    });
+			});
+
+			  $(function(){
+			    $('#community').click(function(){
+			        $('.plan2').toggleClass('vissible hidden');
+			        $('.plan1').toggleClass('hidden vissible');
+			    });
+			});
+
+			//     $(function(){
+			//     $('#community,#business').click(function(){
+			//         $('.plan1').toggleClass('rotate_div');
+			//     });
+			// });
+
+
+			  $(function() {
+				$('.navbar-default a,.pagetop a,.sec1 a').bind('click', function(event) {
+				var $anchor = $(this);
+				$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top - 49
+				}, 1000);
+				event.preventDefault();
+				});
+				});
+
+			   $(window).bind('scroll', function() {
+			        var navHeight = $(window).height() - 500;
+			        if ($(window).scrollTop() > navHeight) {
+			            // $('.navbar-default').addClass('navbar-fixed-top');
+			            $('.pagetop').addClass('active');
+			        } else {
+			            // $('.navbar-default').removeClass('navbar-fixed-top');
+			             $('.pagetop').removeClass('active');
+			        }
+			    });
+
+		});
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+
+	img{
+		width: 100vh;
+	}
+
+	.img_div{
+		position: absolute;
+		z-index: 10;
+		  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+	}
+
+	.active{
+		z-index: 100;
+		  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+
+	}
+	</style>
+<body>
+<div class="img_div">
+  <img src="images/slide-img1.jpg" alt="">
+</div>
+<div class="img_div">
+  <img src="images/slide-img2.jpg" alt="">
+</div>
+<div class="img_div"s>
+  <img src="images/slide-img3.jpg" alt="">
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/vegas.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+   var lis_count = $('div.img_div').length;
+   var active_li_index = 0;
+   
+   setInterval(function(){
+      if( $('div.img_div.active').index() == lis_count-1 )
+        active_li_index  = 0;
+      else
+        active_li_index++;
+        
+      $('div.img_div.active').removeClass('active');
+      $('div.img_div').eq(active_li_index).addClass('active');
+   }, 1500);
+});
+
+
+ $(function() {
+      $('#home').vegas({
+          slides: [
+              { src: 'images/slide-img1.jpg' },
+              { src: 'images/slide-img2.jpg' },
+              { src: 'images/slide-img3.jpg' }
+          ],
+          timer: false,
+          transition: 'zoomIn',
+          animation: 'kenburns'
+      });
+  });
+</script>
+</body>
+</html>
