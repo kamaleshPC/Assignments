@@ -282,6 +282,7 @@ p{
     color: #fff;
     padding: 12px;
     cursor: pointer;
+    /*transition: all .3s ease;*/
 }
 
 
@@ -352,6 +353,18 @@ p{
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 15px;
+}
+
+.sec4 .pricing li .fa{
+    margin-right: 5px;
+}
+
+.sec4 .pricing li .fa-check-circle{
+    color: #82ca9c;
+}
+
+.sec4 .pricing li .fa-times{
+    color: red;
 }
 
 .sec4 .pricing_div footer{
