@@ -40,12 +40,13 @@ p{
 }
 
 .white_nav .order24_7{
-	color: #e7a331;
+	
 	display: inline-block;
 	margin-top: 5px;
 }
 
 .white_nav .order24_7 i{
+	color: #e7a331;
 	    margin-right: 5px;
 }
 
