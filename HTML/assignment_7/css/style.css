@@ -213,6 +213,7 @@ p{
     border-radius: 0px;
     margin-top: 10px;
     color: #fff;
+        box-shadow: none;
 }
 
 .sec3{
@@ -513,6 +514,7 @@ p{
     font-size: 14px;
     font-weight: 400;
     height: 45px;
+        box-shadow: none;
 }
 
 .sec6 .address{
