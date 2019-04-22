@@ -12,7 +12,9 @@
          <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
          <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
 	</head>
-<body class="loader"> 
+<body> 
+    <div class="loader"></div>
+
     <div class="pg_border">
         <div class="left"></div>
         <div class="right"></div>
@@ -35,11 +37,11 @@
             <li><a href="#contact">contact us</a></li>
         </ul>
     </nav>
-    <div id="preloader">
+<!--     <div id="preloader">
             <div class="loader">
                 <img src="img/loader.gif" alt="">
             </div>
-    </div>
+    </div> -->
 	
 	<div id="main-wrapper" class="main_section">
 
@@ -765,6 +767,9 @@
 
     $(document).ready(function() {
 
+          $('.loader').fadeOut(1000);  /*FadeOut after page loaded*/
+            console.log("document loaded!");
+
     $('.owl-div').owlCarousel({
     autoplay:true,
     loop:true,
@@ -817,11 +822,7 @@
   
 });
 
-    $(window).on('load', function(){
-        
-        $('body').addClass('loaded');
-        
-    });
+
     </script>
 </body>
 </html>
