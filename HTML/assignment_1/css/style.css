@@ -167,26 +167,17 @@ p{
     color: #FFF;
 }
 
-.no-js #preloader{
-	display: none;
-}
-
-body.loader #preloader{
-	visibility: hidden;
-	opacity: 0;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
-	background: #fff;
-	z-index: 99;
-	transition: all .3s ease;
-}
-
-body.loaded #preloader{
-	visibility: hidden;
-	opacity: 0;
+.loader {
+    display: block;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #fafafa url(../img/loader.gif) no-repeat center center;
+    text-align: center;
+    color: #999;
 }
 
 .scr{
