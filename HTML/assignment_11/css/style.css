@@ -36,6 +36,17 @@ p{
 	background: #fff;
 	position: relative;
 	transition: all .2s ease-in;
+	text-align: center;
+}
+
+.white_nav .order24_7{
+	color: #e7a331;
+	display: inline-block;
+	margin-top: 5px;
+}
+
+.white_nav .order24_7 i{
+	    margin-right: 5px;
 }
 
 .navbar-fixed-top.on .white_nav{
@@ -598,14 +609,24 @@ footer p a:hover{
 
 
 @media (max-width: 767px){
+
+	.white_nav{
+	text-align: right;
+   }
+
+   .white_nav .order24_7 {
+   	display: block;
+   }
 	
    .navbar-nav {
 	float: none;
    }
 
    .navbar-brand img {
-    width: 140px;
+   	top: -58px;
+    width: 170px;
    }
+
 
    .navbar-inverse .sec_btn {
     margin-left: 5px;
