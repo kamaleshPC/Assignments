@@ -388,6 +388,7 @@ p{
   display: block;
   padding: 20px 15px;
   text-decoration: none;
+   background-color: #eee;
 }
 
 .panel-default>.panel-heading a:after {
