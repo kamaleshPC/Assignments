@@ -373,44 +373,54 @@ p{
 
 /****************  sec8 accordion  ********************/
 
-.sec8 .accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 18px;
-  transition: 0.4s;
-  font-weight: 600;
+.panel-default>.panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #e4e5e7;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-/*.sec8 .active, .accordion:hover {
-  background-color: #ccc;
+.panel-default>.panel-heading a {
+  display: block;
+  padding: 20px 15px;
+  text-decoration: none;
 }
-*/
-.sec8 .accordion:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
+
+.panel-default>.panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   float: right;
-  margin-left: 5px;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
 }
 
-.sec8 .active:after {
+.panel-default>.panel-heading a[aria-expanded="true"] {
+  background-color: #eee;
+  text-decoration: none;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"]:after {
   content: "\2212";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-.sec8 .panel {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  height: 156px;
-  border: none;
+.panel-default>.panel-heading a[aria-expanded="false"]:after {
+  content: "\002b";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 /*************************************************/
