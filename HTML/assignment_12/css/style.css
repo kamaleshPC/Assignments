@@ -22,6 +22,40 @@ p {
     transition: all .3s ease;
 }
 
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+     border-color: transparent; 
+}
+
+.navbar-toggle .icon-bar.b1 {
+   width: 12px;
+   transition: all .3s ease;
+}
+
+.navbar-toggle .icon-bar.b2 {
+   width: 18px;
+    transition: all .3s ease;
+}
+
+.navbar-toggle .icon-bar.b3 {
+   width: 25px;
+}
+
+.navbar-toggle:hover .icon-bar.b1,.navbar-toggle:hover .icon-bar.b2 {
+   width: 25px;
+}
+
+.navbar-toggle .icon-bar.b2 {
+   width: 18px;
+}
+
+.navbar-toggle .icon-bar.b3 {
+   width: 25px;
+}
+
 .navbar.on{
 	background: #fff;
 }
@@ -254,6 +288,10 @@ h1{
 	padding: 4px 2px 0px 2px;
 }
 
+.work .img_div{
+	position: relative;
+}
+
 
 .work .img_overlay{
 	position: absolute;
@@ -430,5 +468,15 @@ footer a:hover{
 	.work .pad_top{
 		padding-top: 4px;
 	}
+
+	.navbar {
+		background: #fff;
+	}
+    
+    .work .img_div img{
+	width:  100%;
+    }
+
+
 
 }
