@@ -1,0 +1,16 @@
+<script>
+    function copySorted(arr) {
+        var val = [];
+        for (var i = 0; i < arr.length; i++) {
+            val[i] = arr[i]
+        }
+        return val.sort();
+    }
+
+    let arr = ["HTML", "JavaScript", "CSS"];
+
+    let sorted = copySorted(arr);
+
+    alert(sorted);
+    alert(arr);
+</script>

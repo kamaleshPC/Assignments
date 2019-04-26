@@ -1,0 +1,29 @@
+<script>
+
+    const insert = (arr, index, ...newItems) => [
+        // part of the array before the specified index
+        ...arr.slice(0, index),
+        // inserted items
+        ...newItems,
+        // part of the array after the specified index
+        ...arr.slice(index)
+    ]
+
+    let styles = ["Jazz", "Blues"];
+
+    styles.push("Rock-n-Roll");
+
+    let l = styles.length;
+
+    let m = Math.ceil(l / 2) - 1;
+
+    alert(styles);
+    styles.splice(m, 1); // removing the middle one
+    // styles.splice(m, 0, "Classics");
+    styles = insert(styles, m, "Classics"); // replacing it by "Classic"
+    alert(styles);
+    alert(styles.shift());  // stripping of the first element
+    alert(styles);
+    styles = insert(styles, 0, "Rap", "Reggae"); // prepending the values
+    alert(styles);
+</script>

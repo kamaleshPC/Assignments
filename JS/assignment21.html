@@ -1,0 +1,14 @@
+<script>
+    let strings = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+
+    function unique(arr) {
+        var a = [];
+        for (let string of arr)
+            if (!a.includes(string))
+                a.push(string);
+        return a;
+    }
+
+
+    alert(unique(strings));
+</script>

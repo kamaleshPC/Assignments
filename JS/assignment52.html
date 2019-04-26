@@ -1,0 +1,24 @@
+<script>
+    // function sumTo(num) {   // for loop
+    //     let sum = 0;
+    //     for (let i = 0; i <= 100; i++) {
+    //         sum += i;
+    //     }
+    //     return sum;
+    // }
+
+    // function sumTo(num) {   // arithmetic progression
+    //     let sum = 0;
+    //     return sum = (num / 2) * (2 + (num - 1));
+    // }
+
+    function sumTo(num) {// recurssion
+    let sum = 0;
+        if (num > 0) {
+            console.log(num);
+            sum = num + sumTo(num - 1);
+        }
+        return sum;
+    }
+    alert(sumTo(100));
+</script>

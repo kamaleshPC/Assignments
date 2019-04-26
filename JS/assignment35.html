@@ -1,0 +1,14 @@
+<script>
+    function extractCurrencyValue(cur) {
+        let l = cur.length;
+        // alert(l);
+        let s = cur.indexOf('$') + 1;
+        // alert(s);
+        let e = l - s;
+        // alert(e);
+        cur = cur.substr(s, e);
+        return cur;
+    }
+
+    alert(extractCurrencyValue('$120'));
+</script>

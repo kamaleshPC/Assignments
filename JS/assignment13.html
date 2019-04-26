@@ -1,0 +1,19 @@
+<script>
+    function filterRange(array, a, b) {
+        var val = [];
+        for (var i = 0; i < array.length; i++) {
+            val[i] = array[i];
+        }
+
+        for (var j = 0; j < val.length; j++) {
+            if (a < val[j] && val[j] > b) {
+                val.splice(j, 1);
+            }
+        }
+        return val;
+    }
+    var arr = [5, 3, 8, 1];
+    var filtered = filterRange(arr, 1, 4);
+    alert(filtered);
+    alert(arr);
+</script>

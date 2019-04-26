@@ -1,0 +1,21 @@
+<script>
+    var nums = [2, 3, 6, 6, 5];
+
+    let max = Math.max.apply(null, nums);
+    // apply accepts an array and it applies the array as parameters to the actual function
+
+    let imax = nums.indexOf(max);
+    // alert(max);
+    // alert(imax);
+    nums.splice(imax, 1);
+    // alert(nums);
+    for (let i = 0; i < nums.length; i++) {
+        if (max == nums[i]) {
+            nums.splice(i, 1);
+        }
+    }
+    // alert(nums);
+    let smax = Math.max.apply(null, nums);
+
+    alert(smax);
+</script>

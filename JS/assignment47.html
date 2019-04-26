@@ -1,0 +1,13 @@
+<script>
+    let user = {
+        name: 'John',
+        [Symbol("id")]: 123,
+        age: 30
+    };
+
+    function count(obj) {
+        return Object.keys(obj).length;
+    }
+
+    alert(count(user));
+</script>

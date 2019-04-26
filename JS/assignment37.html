@@ -1,0 +1,31 @@
+<script>
+    function sortalph(word) {
+        if (!word) { return; }
+        word = word.toLowerCase().split('').sort().join('');
+        return word;
+    }
+
+
+    function aclean(array) {
+
+        let ang = [];
+        let anag = [];
+        let anagram = [];
+        for (let i = 0; i < array.length; i++) {
+            ang[i] = array[i];
+            ang[i] = sortalph(ang[i]);
+
+            if (!anag.includes(ang[i])) {
+                anag.push(ang[i]);
+                anagram.push(array[i]);
+            }
+        }
+
+        // alert(ang);
+        return anagram;
+    }
+
+    let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+    alert(aclean(arr));
+</script>

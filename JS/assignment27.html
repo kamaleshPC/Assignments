@@ -1,0 +1,14 @@
+<script>
+    function getDateAgo(date, days) {
+        var agodate = new Date(date); // getting data and copying it
+
+        agodate.setDate(date.getDate() - days);   // subtracting days from new date and setting it
+        return agodate.getDate(); //getting the date of the new fixed date
+    }
+
+    let date = new Date(2015, 0, 2);
+
+    alert(getDateAgo(date, 1));
+    alert(getDateAgo(date, 2));
+    alert(getDateAgo(date, 365));
+</script>

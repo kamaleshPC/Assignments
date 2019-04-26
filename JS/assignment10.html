@@ -1,0 +1,15 @@
+<script>
+    function Accumulator(startingValue) {
+            this.value = startingValue;       // first the startingValue is assigned to this.value
+
+            this.read = function () {                   // using this.read prompts for a number to be added to this.value
+                this.value += +prompt('How much to add?', 0);
+            };
+
+        }
+
+        let accumulator = new Accumulator(1);
+        accumulator.read();
+        accumulator.read();
+        alert(accumulator.value);
+</script>

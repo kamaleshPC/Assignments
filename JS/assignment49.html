@@ -1,0 +1,43 @@
+<script>
+    let company = {
+        sales: [{
+            name: 'John',
+            salary: 1000
+        }, {
+            name: 'Alice',
+            salary: 600
+        }],
+
+        development: {
+            sites: [{
+                name: 'Peter',
+                salary: 2000
+            }, {
+                name: 'Alex',
+                salary: 1800
+            }],
+
+            internals: [{
+                name: 'Jack',
+                salary: 1300
+            }]
+        }
+    };
+
+    function salSum(obj) {
+        if (Array.isArray(obj)) {
+            return obj.reduce((prev, current) => prev + current.salary, 0);
+        } else { // case (2)
+            console.log("starting new object")
+            let sum = 0;
+            for (let subdep of Object.values(obj)) {
+                let subsum = salSum(subdep)
+                console.log("subsum = ", subsum)
+                sum = sum + subsum;
+            }
+            console.log("current sum:", sum)
+            return sum;
+        }
+    }
+    alert(salSum(company));
+</script>

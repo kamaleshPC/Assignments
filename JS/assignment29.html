@@ -1,0 +1,13 @@
+<script>
+    function getSecondsToday() {
+        let now = new Date();
+        // alert(now);
+
+        let start_time = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        // alert(start_time);
+        let sec = now - start_time; // sec in milliseconds
+        return Math.round(sec / 1000); // divide 1000 to get in seconds
+    }
+
+    alert(getSecondsToday());
+</script>

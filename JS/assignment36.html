@@ -1,0 +1,13 @@
+<script>
+
+    function unique(array) {
+
+        // var a = new Set(array);
+        // console.log(a);
+        var result = Array.from(new Set(array));
+        return result
+    }
+
+    let strings = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", ":-O"];
+    alert(unique(strings));
+</script>

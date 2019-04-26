@@ -1,0 +1,22 @@
+<script type="text/javascript">
+
+
+var user = {
+
+	name : "john",
+	money : 1000,
+
+  [Symbol.toPrimitive](hint) {
+    if (hint == 'string') {
+       return `{name: ${this.name}}`;
+    }
+    else{
+    	return this.money;
+    }
+  }
+};
+
+alert(user);
+alert(+user);
+alert(user + 500);
+</script>
