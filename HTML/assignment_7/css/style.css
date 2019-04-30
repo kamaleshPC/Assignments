@@ -188,7 +188,7 @@ p{
     color: #000;
     font-size: 42px;
     font-weight: 300;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 
 .sec2 p{
@@ -202,7 +202,7 @@ p{
 }
 
 .sec2 li{
-    margin: 15px 0px; 
+    margin: 15px 0px;
     font-size: 17px;
 }
 
@@ -302,7 +302,7 @@ p{
     pointer-events: auto;
     text-align: center;
     color: #000;
-    font-size: 14px; 
+    font-size: 14px;
     position: relative;
     z-index: 1;
     border:1px #82ca9c solid;
@@ -339,7 +339,7 @@ p{
 }
 
 .sec4 .price_body{
-    overflow-x: visible; 
+    overflow-x: visible;
 }
 
 .sec4 .pricing{
@@ -432,7 +432,7 @@ p{
 }
 
 .go_back{
-    z-index: 2
+    z-index: 2;
 }
 
 .sec5{
@@ -493,7 +493,7 @@ p{
 }
 
 .sec6 .form-control{
- 
+
     border: 1px #d0d0d0 solid;
     border-radius: 0px;
     font-size: 15px;
@@ -727,6 +727,6 @@ footer a{
    }
 
    .sec2.pad_top{
-    padding-top: 0px; 
+    padding-top: 0px;
    }
 }

@@ -27,6 +27,11 @@ a:hover{
 }
 
 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #ddd;
+    background-color: transparent;
+}
+
 .navbar-default .navbar-toggle .icon-bar{
     background-color: #888;
     border-color: transparent;
@@ -201,7 +206,7 @@ p{
 
 .sec5 .speaker_info{
 	background: #fff;
-    margin-top: -20px; 
+    margin-top: -20px;
     padding: 10px;
 }
 
@@ -485,7 +490,7 @@ p{
 }
 
 .sec11 .contact_details{
-    padding: 50px; 
+    padding: 50px;
 }
 
 .sec11 .form-control{
@@ -513,7 +518,7 @@ p{
     border-radius: 40px;
     height: 48px;
     letter-spacing: 2px;
-    margin-top: 30px; 
+    margin-top: 30px;
 }
 
 .sec11 .sec_btn1:hover {
@@ -622,7 +627,7 @@ a{
 
 .row {
      margin-right: 0px;
-     margin-left: 0px; 
+     margin-left: 0px;
 }
 
 h1{
