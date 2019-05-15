@@ -1,0 +1,20 @@
+<script>
+// function User(name) {    // working example
+// this.name = name;
+// }
+
+// let user = new User('John');
+// let user2 = new user.constructor('Pete');
+
+// alert( user2.name );
+ 
+function User(name) {     // example not working
+  this.name = name;
+}
+User.prototype = {}; // (*)
+
+let user = new User('John');
+let user2 = new user.constructor('Pete');
+
+alert( user2.name );  
+</script>

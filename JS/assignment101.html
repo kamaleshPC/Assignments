@@ -1,0 +1,9 @@
+<script>
+	function handler(e){
+		e = e || window.event;
+        e.preventDefault();
+        alert("...");
+        return false;
+	}
+</script>
+<a href="http://w3/org" onclick="handler(event)">the browser will go to w3.org</a>

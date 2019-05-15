@@ -1,0 +1,53 @@
+<script>
+	// function Rabbit(){}       // A
+
+	// Rabbit.prototype = {
+	// 	eats: true
+	// };
+
+	// let rabbit = new Rabbit();
+	// Rabbit.prototype = {};
+
+	// alert(rabbit.eats);  // true
+
+
+	// function Rabbit(){}       // B
+
+	// Rabbit.prototype = {
+	// 	eats: true
+	// };
+
+	// let rabbit = new Rabbit();
+	// Rabbit.prototype.eats = false;
+
+	// alert(rabbit.eats);  // false
+
+
+	// function Rabbit(){}       // C
+
+	// Rabbit.prototype = {
+	// 	eats: true
+	// };
+
+	// let rabbit = new Rabbit();
+	
+	// delete rabbit.eats;
+
+	// alert(rabbit.eats);       // true
+
+
+
+	function Rabbit(){}       // D
+
+	Rabbit.prototype = {
+		eats: true
+	};
+
+	let rabbit = new Rabbit();
+	
+	delete Rabbit.prototype.eats;
+
+	alert(rabbit.eats);   // undefined
+
+
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<ul id="ul">
+		<li id="one">1</li>
+		<li id="two">4</li>
+	</ul>
+
+	<button onclick="additems()">ADD</button>
+
+</body>
+<script>
+	var count = 1;
+function additems() {
+  var newItem = document.createElement("LI");
+  var new1 = document.createTextNode("2");
+  var new2 = document.createTextNode("3");
+  var list = document.getElementById("ul");
+
+  if(count == 1){
+  newItem.appendChild(new1);
+  list.insertBefore(new1, list.childNodes[2]);
+  count = 2;
+  }
+  else if(count == 2)
+  {
+  newItem.appendChild(new2);
+  list.insertBefore(new2, list.childNodes[4]);
+  }
+}
+</script>
+</html>

@@ -1,0 +1,18 @@
+<script>
+    function sum(a) {
+        let sum = a;
+
+        function next(b) {
+            sum += b;
+            return next;
+        }
+
+        next.toString = function () {
+            return sum;
+        }
+        return next;
+    }
+
+    alert(sum(1)(2));
+    alert(sum(1)(2)(3));
+</script>

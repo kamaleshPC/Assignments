@@ -1,0 +1,20 @@
+<script>
+    let arr1 = [4, 22, 54, -52, 36, 105];
+    let arr2 = [84, 45, 65, 98, 52, 14, 70];
+    let arr3 = [55, 65, 32, 65, 98, 45, 52, 25];
+
+    // var arr = arr1.concat(arr2.concat(arr3));   // 1
+    // alert(arr);
+
+    for (var i = 0; i < arr2.length; i++) {            // 2
+        arr1.push(arr2[i]);
+    }
+
+    for (var i = 0; i < arr3.length; i++) {
+        arr1.push(arr3[i]);
+    }
+
+    // Array.prototype.push.apply(arr1, arr2);       // 3
+    // Array.prototype.push.apply(arr1, arr3);
+    alert(arr1);
+</script>

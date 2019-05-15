@@ -1,0 +1,24 @@
+<script>
+	let head = {
+		glasses: 1
+	};
+
+	let table = {
+		pen: 3
+	};
+
+	let bed = {
+		__proto__: head,
+		sheet: 1,
+		pillow: 2
+	};
+
+	let pockets = {
+		__proto__: table,
+		money: 2000
+	};
+
+	alert(pockets.pen);
+
+	alert(bed.glasses);
+</script>
